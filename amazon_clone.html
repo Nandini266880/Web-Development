@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Clone</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+*{
+    margin: 0;
+    font-family: Arial;
+    border: border-box;
+}
+
+body{
+    width: 99vw;
+}
+
+.navbar{
+    height: 60px;
+    background-color: #0f1111;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.nav-logo{
+    height: 45px;
+    width: 100px;
+}
+ 
+.border{
+    border: 2px solid transparent;
+} 
+
+.border:hover{
+    border: 2px solid white;
+} 
+
+.logo{
+    background-image: url("amazon_logo_black.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 45px;
+    width: 100%;
+}
+
+/*  BOX 2  */
+
+.add-icon{
+    display: flex;
+    align-items: center;
+}
+
+.add-first{
+    color: #cccccc;
+    font-size: 0.85rem;
+    margin-left: 15px;
+}
+
+.add-second{
+    font-size: 1rem;
+    color: #ffffff;
+    margin-left: 3px;
+}
+
+/* BOX 3 */
+
+.nav-searchBox{
+    width: 900px;
+    height: 42px;
+    display: flex;
+}
+
+.nav-searchBox:hover{
+    border:2px solid orange;
+}
+
+.search-select{
+    background-color: #f3f3f3;
+    width: 50px;
+    font-size: small;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border: none;
+}
+
+.search-input{
+    width: 800px;
+    height: 40px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    font-style: sans-serif;
+    border: none;
+}
+
+.search-icon{
+    background-color:orange;
+    height: 42px;
+    width: 50px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color: #0f1111;
+}
+
+/* BOX 4 */
+
+span{
+    font-size: 0.75rem;
+}
+
+.nav-second{
+    font-weight: 700;
+}
+
+/* BOX 6 */
+
+.nav-cart i {
+    font-size: 38px;
+}
+
+.nav-cart{
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+/** PANEL **/
+
+.panel{
+    background-color: #222f3d;
+    color: #ffffff;
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.panel-all{
+    margin-left: 1rem;
+    font-weight: 600;
+}
+
+.panel-options a {
+    display: inline-block;
+    font-weight: 500;
+    text-decoration: none;
+    color: #ffffff;
+    margin-left: 1rem;
+}
+
+.panel-options{
+    width: 70%;
+    font-size: 0.9rem;
+    margin-left: 5px;
+}
+
+/* HERO SECTION */
+
+.hero-section{
+    background-image: url("https://m.media-amazon.com/images/I/81KkrQWEHIL._SX3000_.jpg");
+    background-size: cover;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-left: 1rem;
+}
+
+.hero-message {
+    color: black;
+    background-color: whitesmoke;
+    height:40px;
+    width: 98%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.hero-message a {
+    color: #007185;
+    text-decoration: none;
+}
+
+.hero-message a:hover{
+    color: red;
+    text-decoration: underline;
+}
+
+/* SHOP SECTION */
+
+.shop-section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: #FFD0EC;
+}
+
+.shop-section a{
+    color: #007185;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.shop-section a:hover{
+    color: red;
+}
+
+.box{
+    height: 450px;
+    width: 23%;
+    background-color: #ffffff;
+    padding: 20px 0px 15px;
+    margin-top: 1.5rem;
+}
+
+.box-content{
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.boxmid{
+    background-size: cover;
+    height: 320px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.boxmid img{
+    height: 110px;
+    width: 150px;
+}
+
+.books, .kitchen, .toys, .computers{
+    height: 280px;
+    width: 96vw;
+    margin-top: 1rem;
+    background-color: white;
+}
+
+h3{
+    padding-top: 1.5rem;
+    padding-left: 1.4rem;
+}
+
+.parts{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 0.5rem;
+}
+
+/* FOOTER SECTION */
+
+footer{
+    margin-bottom: 0;
+    color: azure;
+    margin-top: 15px;
+}
+
+footer a:hover{
+    text-decoration: underline;
+}
+
+.foot-panel1 {
+    background-color: #37475a;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.85rem;
+}
+
+.foot-panel2{
+    background-color: #222f3d;
+    height: 400px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.foot-panel2 ul p{
+    font-weight: 700;
+    margin-top: 50px;
+}
+
+.foot-panel2 ul a{
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 300;
+    margin-top: 10px;
+    color: #cccccc;
+}
+
+.foot-panel3{
+    background-color: #222f3d;
+    border-top: 0.5px solid white;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.foot-panel3 p{
+    font-size: 2rem;
+    font-weight: 700;
+    color: orange;
+    margin-left: 20px;
+}
+
+.foot-icon{
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcdhfIRp2nQmWM4A6gtMCL7IBedVxOW8bTEg&usqp=CAU");
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    height: 50px;
+    width: 40px;
+}
+
+.foot-panel4{
+    color: whitesmoke;
+    background-color: #131A22;
+    height: 450px;
+    padding-top: 1.5rem;
+}
+
+.foot-anchors1, .foot-anchors2, .foot-anchors3, .foot-anchors4{
+    font-size: 0.8rem;
+    padding: 10px 70px 20px 150px;
+    margin-left: 80px;
+    display: flex;
+    justify-content: center;
+    a{
+      margin-right: 80px;
+    }
+}
+
+a{
+    text-decoration: none;
+    color: rgb(245, 245, 245);
+    hover{
+        text-decoration: underline;
+    }
+}
+
+span{
+    display: block;
+    font-size: 0.77rem;
+    font-weight: 300;
+    margin-top: 2px;
+    color: #999999;
+}
+
+.foot-panel5{
+    color: whitesmoke;
+    background-color: #131A22;
+    text-align: center;
+    height: 70px;
+}
+
+.pages{
+    font-size: 0.85rem;
+}
+
+.foot-last{
+    margin-top: 0.2rem;
+    font-size: 0.7rem;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="nav-logo border">
+                <div class="logo"></div>
+            </div>
+
+            <div class="nav-address border">
+                <p class="add-first">Deliver to</p>
+                <div class="add-icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p class="add-second">India</p>
+                </div>
+            </div>
+
+            <div class="nav-searchBox">
+                <select class="search-select">
+                    <option>All</option>
+                </select>
+                <div class="search-bar">
+                <b><input class="search-input" type="text" name="search" placeholder="Search Amazon"></b>
+                </div>
+                <div class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+            </div>
+
+            <div class="nav-signin border">
+                <p><span>Hello, sign in</span></p>
+                <p class="nav-second">Account & Links</p>
+            </div>
+
+            <div class="nav-return border">
+                <p><span>Returns</span></p>
+                <p class="nav-second">& Orders</p>
+            </div>
+
+            <div class="nav-cart border">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Cart
+            </div>
+        </div>
+
+        <div class="panel">
+            <div class="panel-all border">
+                <i class="fa-solid fa-bars"></i>
+                All
+            </div>
+
+            <div class="panel-options">
+                <a href="#" class="border">Today's Deals</p>
+                <a href="#" class="border">Customer Services</a>
+                <a href="#" class="border">Registry</a>
+                <a href="#" class="border">Gift Cards</a>
+                <a href="#" class="border">Sell</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+    <div class="hero-section">
+        <div class="hero-message">
+            <p>You are on amazon.com. You can also shop on Amazon India for millions of products with fast local delivery. <a href="#">Click here to go to amazon.in</a></p>
+        </div>
+    </div>
+
+    <div class="shop-section">
+        <div class="box1 box">
+            <div class="box-content">
+                <h2> Lunar New Year</h2>
+                <div class="boxmid" style="background-image: url('https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2024/LunarNY/Fuji_Single_card_Lunar_New_Year_Graphics_1x_EN._SY304_CB585956471_.jpg');"></div>
+                <a href="#">Shop now</a>
+            </div>
+        </div>
+        <div class="box2 box">
+            <div class="box-content">
+                <h2> New Year, new supplies</h2>
+                <div class="boxmid" style="background-image: url('https://images-na.ssl-images-amazon.com/images/G/01/US-hq/2023/img/Consumer_Electronics/XCM_CUTTLE_1555947_2997386_379x304_1X_en_US._SY304_CB594429819_.jpg');"></div>
+                <a href="#">Shop office products</a>
+            </div>
+        </div>
+        <div class="box3 box">
+            <div class="box-content">
+                <h2> Deals in PCs</h2>
+                <div class="boxmid" style="background-image: url('https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2023/EBF23/Fuji_Desktop_Single_image_EBF_1x_v1._SY304_CB573698005_.jpg');"></div>
+                <a href="#">Shop now</a>
+            </div>
+        </div>
+        <div class="box4 box">
+            <div class="box-content">
+                <h2> Toys under $25</h2>
+                <div class="boxmid" style="background-image: url('https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2023/EBF23/Fuji_Desktop_Single_image_EBF_1x_v3._SY304_CB573698005_.jpg');"></div>
+                <a href="#">Shop now</a>
+            </div>
+        </div>
+        <div class="box5 box">
+            <div class="box-content">
+                <h2> Shop activity trackers and smartwatches</h2>
+                <div class="boxmid" style="background-image: url('https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2021/September/DashboardCards/Fuji_Dash_SmartWatch_1X._SY304_CB639922137_.jpg');"></div>
+                <a href="#">Shop now</a>
+            </div>
+        </div>
+        <div class="box6 box">
+            <div class="box-content">
+                <h2> Upgrade your office furniture</h2>
+                <div class="boxmid" style="background-image: url('https://images-na.ssl-images-amazon.com/images/G/01/dex/2023/Roar/October/D_CC_Roar_OfficeDepot_1023_1X_Furnitrure_v2._SY304_CB577544739_.jpg');"></div>
+                <a href="#">Shop now</a>
+            </div>
+        </div>
+        <div class="box7 box">
+            <div class="box-content">
+                <h2> Deals on Shoes</h2>
+                <div class="boxmid" style="background-image: url('box7.jpg');"></div>
+                <a href="#">See more</a>
+            </div>
+        </div>
+        <div class="box8 box">
+            <div class="box-content">
+                <h2> Personal Care under $25</h2>
+                <div class="boxmid" style="background-image: url('https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2023/EBF23/Fuji_Desktop_Single_image_EBF_1x_v10._SY304_CB573698005_.jpg');"></div>
+                <a href="#">See more</a>
+            </div>
+        </div>
+
+        <div class="books">
+            <h3>Best Sellers in Books</h3>
+            <div class="parts">
+                <img src="https://m.media-amazon.com/images/I/913C+MR3S5L._AC_SY200_.jpg">
+                <img src="https://m.media-amazon.com/images/I/817-Vrzp+tL._AC_SY200_.jpg">
+                <img src="https://m.media-amazon.com/images/I/91jbHTNpy6L._AC_SY200_.jpg">
+                <img src="https://m.media-amazon.com/images/I/81YkqyaFVEL._AC_SY200_.jpg">
+                <img src="https://m.media-amazon.com/images/I/91n7p-j5aqL._AC_SY200_.jpg">
+                <img src="https://m.media-amazon.com/images/I/71aNoZYvEhL._AC_SY200_.jpg">
+                <img src="https://m.media-amazon.com/images/I/91xxhwnNcyL._AC_SY200_.jpg">
+                <img src="https://m.media-amazon.com/images/I/81YYStQvnsL._AC_SY200_.jpg">
+            </div>
+        </div>
+        
+        <div class="kitchen">
+            <h3>Best Sellers in Kitchen & Dining</h3>
+            <div class="parts">
+                <img src="https://m.media-amazon.com/images/I/71CmEDQIn-S._AC_SY200_.jpg">
+                <img src="https://m.media-amazon.com/images/I/71mL0rwKWNL._AC_SY200_.jpg">
+                <img src="https://m.media-amazon.com/images/I/71ieKqkc+gL._AC_SY200_.jpg">
+                <img src="https://m.media-amazon.com/images/I/51fd-ARdg7L._AC_SY200_.jpg">
+                <img src="https://m.media-amazon.com/images/I/61POocZniqL._AC_SY200_.jpg">
+                <img src="https://m.media-amazon.com/images/I/71tX1irZ1ML._AC_SY200_.jpg">
+            </div>
+        </div>
+
+        <div class="box8 box">
+            <div class="box-content">
+                <h2> Creating business solutions</h2>
+                <div class="boxmid" style="background-image: url('https://images-na.ssl-images-amazon.com/images/G/01/us-manual-merchandising/RBS-in-house-Graphics/cc_359_laptop_us_v1._SY304_CB576754001_.jpg');"></div>
+                <a href="#">Shop now</a>
+            </div>
+        </div>
+
+        <div class="box9 box">
+            <div class="box-content">
+                <h2> Refresh your space</h2>
+                <div class="boxmid">
+                    <img src="https://images-na.ssl-images-amazon.com/images/G/01/launchpad/2023/Gateway/January/DesktopQuadCat_186x116_LP-HP_B08MYX5Q2W_01.23._SY116_CB619238939_.jpg">
+                    
+                    <img src="https://images-na.ssl-images-amazon.com/images/G/01/launchpad/2023/Gateway/January/DesktopQuadCat_186x116_home_B08RCCP3HV_01.23._SY116_CB619238939_.jpg">
+                    
+                    <img src="https://images-na.ssl-images-amazon.com/images/G/01/launchpad/2023/Gateway/January/DesktopQuadCat_186x116_kitchen_B0126LMDFK_01.23._SY116_CB619238939_.jpg">
+                    
+                    <img src="https://images-na.ssl-images-amazon.com/images/G/01/launchpad/2023/Gateway/January/DesktopQuadCat_186x116_health-beauty_B07662GN57_01.23._SY116_CB619238939_.jpg">
+                    
+                </div>
+                <a href="#">See more</a>
+            </div>
+        </div>
+
+        <div class="box11 box">
+            <div class="box-content">
+                <h2> Player's paradise starts here</h2>
+                <div class="boxmid" style="background-image: url('https://images-na.ssl-images-amazon.com/images/G/01/US-hq/2023/img/Consumer_Electronics/XCM_CUTTLE_1546843_2940864_379x304_1X_en_US._SY304_CB613273467_.jpg');"></div>
+                <a href="#">Shop video games</a>
+            </div>
+        </div>
+
+        <div class="box12 box">
+            <div class="box-content">
+                <h2> A whole new way to work</h2>
+                <div class="boxmid" style="background-image: url('https://images-na.ssl-images-amazon.com/images/G/01/US-hq/2023/img/Consumer_Electronics/XCM_CUTTLE_1622892_3373436_379x304_1X_en_US._SY304_CB597161294_.jpg');"></div>
+                <a href="#">Shop personal computers</a>
+            </div>
+        </div>
+
+        <div class="toys">
+            <h3>Best Sellers in Toys & Games</h3>
+            <div class="parts">
+                <img src="https://m.media-amazon.com/images/I/811u9CmAv6L._AC_SY200_.jpg">
+                <img src="https://m.media-amazon.com/images/I/71S1UEWVIBL._AC_SY200_.jpg">
+                <img src="https://m.media-amazon.com/images/I/81TbMhaj6TL._AC_SY200_.jpg">
+                <img src="https://m.media-amazon.com/images/I/71n3PykRJeL._AC_SY200_.jpg">
+                <img src="https://m.media-amazon.com/images/I/81iBPIpNC3L._AC_SY200_.jpg">
+                <img src="https://m.media-amazon.com/images/I/81E3XzRsccL._AC_SY200_.jpg">
+            </div>
+        </div>
+
+        <div class="computers">
+            <h3>Best Sellers in Computers & Accessories</h3>
+            <div class="parts">
+                <img src="https://m.media-amazon.com/images/I/51HbD2W7FtL._AC_SY200_.jpg">
+                <img src="https://m.media-amazon.com/images/I/21SPDoiRuGL._AC_SY200_.jpg">
+                <img src="https://m.media-amazon.com/images/I/71QPduoKd1L._AC_SY200_.jpg">
+                <img src="https://m.media-amazon.com/images/I/610lABRzuuL._AC_SY200_.jpg">
+                <img src="https://m.media-amazon.com/images/I/71p+P8mZ3RL._AC_SY200_.jpg">
+                <img src="https://m.media-amazon.com/images/I/71rAlnvFHoL._AC_SY200_.jpg">
+            </div>
+        </div>
+    </div>
+    </main>
+     
+    
+    <footer>
+        <div class="foot-panel1">
+            Back To Top
+        </div>
+        <div class="foot-panel2">
+            <ul>
+                <p>Get to Know Us</p>
+                <a>Careers</a>
+                <a>Blog</a>
+                <a>About Amazon</a>
+                <a>Investor Relations</a>
+                <a>Amazon Devices</a>
+                <a>Amazon Science</a>
+            </ul>
+
+            <ul>
+                <p>Make Money with Us</p>
+                <a>Sell products on Amazon</a>
+                <a>Sell on Amazon Business</a>
+                <a>Sell apps on Amazon</a>
+                <a>Become an Affiliate</a>
+                <a>Advertise Your Products</a>
+                <a>Self-Publish with Us</a>
+                <a>Host an Amazon Hub</a>
+                <a>›See More Make Money <br>with Us</a>
+            </ul>
+           
+            <ul>
+                <p>Amazon Payment Products</p>
+                <a>Amazon Business Card</a>
+                <a>Shop with Points</a>
+                <a>Reload Your Balance</a>
+                <a>Amazon Currency Converter</a>
+            </ul>
+        
+            <ul>
+                <p>Let Us Help You</p>
+                <a>Amazon and COVID-19</a>
+                <a>Your Accounts</a>
+                <a>Your Orders</a>
+                <a>Shipping Rates & Policies</a>
+                <a>Returns & Replacements</a>
+                <a>Manage Your Content and Devices</a>
+                <a>Amazon Assistant</a>
+                <a>Help</a>
+            </ul>
+        </div>
+
+        <div class="foot-panel3">
+            <div class="foot-icon"></div>
+            <p>amazon.in</p>
+        </div>
+
+        <div class="foot-panel4">
+            <div class="foot-anchors1">
+                <a href="#">Amazon Music<br><span>Stream millions<br> of songs</span></a>
+                <a href="#">Amazon Ads<br><span>Reach customers<br> wherever they<br> spend their time</span></a>
+                <a href="#">6pm<br><span>Score deals<br> on fashion<br> brands</span></a>
+                <a href="#">AbeBooks<br><span>Books, Arts<br> & collectibles</span></a>
+                <a href="#">ACX<br><span>Audiobook Publishing<br> Made Easy</span></a>
+                <a href="#">Sell on Amazon<br><span>Start a Selling<br> Account</span></a>
+                <a href="#">Amazon Business<br><span>Everything<br> For<br> Your<br> business</span></a><br>
+            </div> 
+            <div class="foot-anchors2">
+                <a href="#">AmazonGlobal<br><span>Ship Orders<br>Internationally</span></a>
+                <a href="#">Home Services<br><span>Experienced Pros<br> Happiness<br> Guarantee</span></a>
+                <a href="#">Amazon Web<br>Services<br><span>Scalable Cloud<br>Computing<br>Services</span></a>
+                <a href="#">Audible<br><span>Listen to Books &<br>Original<br>Audio<br>Performances</span>
+                <a href="#">Box Office Mojo<br><span>Find Movie<br>Box Office Data</span></a>
+                <a href="#">Goodreads<br><span>Book Reviews<br>&<br>recommendations</span></a>
+                <a href="#">IMDb<span>Movies, TV<br>& Celebrities</span></a>
+            </div>
+            <div class="foot-anchors3">
+                <a href="#">IMDbPro<br><span>Get Info<br> Entertainment<br> Professionals<br> Need</span></a>
+                <a href="#">Kindle Direct<br> Publishing<br><span>Indie Digital &<br> Print Publishing<br> Made Easy</span></a>
+                <a href="#">Prime Video<br> Direct<br><span>Video<br> Distribution<br>Made Easy</span></a>
+                <a href="#">Shopbop<br><span>Designer<br> Fashion Brands</span></a>
+                <a href="#">Woot!<br><span>Deals and<br> Shenanigans</span></a>
+                <a href="#">Zappos<br><span>Shoes &<br> Clothing</span></a>
+                <a href="#">Ring<span>Smart Home<br> Security<br> Systems</span></a>
+            </div>
+            <div class="foot-anchors4">
+                <a href="#">eero WiFi<span>Stream 4K Video<br> in Every Room</span></a>
+                <a href="#">Blink<span>Smart Security<br> for Every<br> Home</span></a>
+                <a href="#">Neighbors App<span>Real-Time Crime<br>& Safety Alerts</span></a>
+                <a href="#">Amazon Subscription Boxes<span>Top subscription boxes<br>-right to your door</span></a>
+                <a href="#">PillPack<span>Pharmacy<br> Simplified</span></a>
+            </div>
+        </div>
+        <div class="foot-panel5">
+            <div class="pages">
+                <pre><a>Conditions of Use</a>   <a>Privacy Notice</a>   <a>Your Ads Privacy Choices</a>  <i class="fa-solid fa-check"></i>/<i class="fa-solid fa-xmark"></i></pre>
+                </div>
+                <div class="foot-last">
+                    <p>© 1996-2024, Amazon.com, Inc. or its affiliates</p>
+            </div>
+        </div>
+
+    </footer>
+</body>
+</html>
